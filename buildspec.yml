@@ -1,0 +1,18 @@
+ echo Entered the install phase...
+      - apt-get update -y
+      - apt-get install -y apache2
+      - apt-get install -y php5-*
+        pre_build:
+    commands:
+      - 
+  
+artifacts:
+  files:
+    - target/message.zip
+  discard-paths: yes
+cache:
+  paths:
+    - '/root/.m2/**/*'
+
+
+
